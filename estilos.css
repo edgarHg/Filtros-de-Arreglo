@@ -19,4 +19,20 @@ body{
 	font-size: 1.3em;
     font-weight: lighter;
 }
+.contenedor-pre{
+display: flex;
+}
 
+.contenedor-pre pre {
+	width: 47%px;                          
+	white-space: pre-wrap;                 
+	word-wrap: break-word;                 
+	/* overflow-x: auto; */                
+	/* width: 99%; */	
+}
+
+.contenedor pre:hover {
+	position: relative;
+	width: 700px;
+	z-index: 99;
+	}
