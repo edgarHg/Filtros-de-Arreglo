@@ -20,19 +20,21 @@ body{
     font-weight: lighter;
 }
 .contenedor-pre{
-display: flex;
+	display: flex;
+	justify-content: space-around;
 }
 
 .contenedor-pre pre {
-	width: 47%px;                          
+	width: 45%;                          
 	white-space: pre-wrap;                 
-	word-wrap: break-word;                 
-	/* overflow-x: auto; */                
-	/* width: 99%; */	
+	word-wrap: break-word;
+	background-color: rgba(251, 251, 251, 0.95);
+	font-size: 14px;
+	padding: 10px;
+	font-family: monospace;                 
 }
 
 .contenedor pre:hover {
 	position: relative;
-	width: 700px;
 	z-index: 99;
-	}
+}
