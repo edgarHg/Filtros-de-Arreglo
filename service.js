@@ -12,6 +12,13 @@ angular.module('serviceApp', [])
 			    	arreglo.push(arr[key]);
 
 				return arreglo;
+			},
+			eliminarPosicion : function(arreglo, posicion){
+				for(var i = posicion; i <= array.length - 1; i++){
+					array.splice(i, 1, array[ i * 1 + 1 ]);
+				}
+				array.pop();
+				return array;
 			}
 		}
 	}])
