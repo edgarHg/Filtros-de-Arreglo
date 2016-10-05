@@ -2,8 +2,9 @@ angular.module('App', ['serviceApp'])
 	.controller('ctrlFiltrosArray', ['$scope', 'filtrosArray',function($scope,filtrosArray){
 
 		$scope.objIteracion = { filtroUnico : null,
-								eliminarPosicion : null
+								eliminarPosicion : ""
 							};
+		$scope.arregloFiltrado = [];
 
 		var arrVerduras = [
 			  {
@@ -49,6 +50,16 @@ angular.module('App', ['serviceApp'])
 			];
 
 		$scope.arregloVerduras = angular.toJson(arrVerduras, true);
+
+		$scope.EliminarPosicion = function(){
+
+			var posicion = $scope.objIteracion.eliminarPosicion
+			if( posicion!== "" && posicion <= arrVerduras.length){
+				$scope.arregloFiltrado = angular.toJson(filtrosArray.eliminarPosicion(arrVerduras, posicion), true);
+			}else{
+				console.log("No existe esa Posicion");
+			}
+		};
 
 		$scope.$watch('objIteracion.filtroUnico', function(filtro) {
         	//$scope.modelAsJson = angular.toJson(model, true);
